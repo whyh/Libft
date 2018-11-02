@@ -1,26 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 16:53:34 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/10/31 17:38:25 by dderevyn         ###   ########.fr       */
+/*   Created: 2018/10/30 20:17:43 by dderevyn          #+#    #+#             */
+/*   Updated: 2018/10/31 18:26:11 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+static void	ft_strconcat(const char *s1, const char *s2, char *str)
 {
-	char *restrict	p;
-
-	p = s1;
 	while (*s1)
-		++s1;
-	while (*s2 && n-- > 0)
-		*s1++ = *s2++;
-	*s1 = '\0';
-	return (p);
+		*str++ = *s1++;
+	while (*s2)
+		*str++ = *s2++;
+}
+
+char		*ft_strjoin(char const *s1, char const *s2)
+{
+	char		*str;
+	const char	*p;
+	int			i;
+
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	i = 1;
+	p = s1;
+	while (*p++)
+		++i;
+	p = s2;
+	while (*p++)
+		++i;
+	str = ft_strnew(i--);
+	if (str == NULL)
+		return (NULL);
+	ft_strconcat(s1, s2, str);
+	return (str);
 }

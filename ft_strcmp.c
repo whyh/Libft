@@ -6,20 +6,14 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/29 19:30:35 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/10/29 19:50:06 by dderevyn         ###   ########.fr       */
+/*   Updated: 2018/10/30 11:04:21 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#define U (unsigned char)
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
 	while (*s1 && *s2)
 		if (*s1++ != *s2++)
-			return (U*(s1 - 1) - U*(s2 - 1));
-	if (!*s1 && *s2)
-		return (U*s1 - U*s2);
-	if (!*s2 && *s1)
-		return (U*s1 - U*s1);
-	return (0);
+			return ((unsigned char)*(s1 - 1) - (unsigned char)*(s2 - 1));
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }

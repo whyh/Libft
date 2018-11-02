@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/26 16:01:18 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/10/31 13:31:21 by dderevyn         ###   ########.fr       */
+/*   Created: 2018/10/30 14:37:49 by dderevyn          #+#    #+#             */
+/*   Updated: 2018/10/30 14:51:18 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	write(1, &c, 1);
+	const char	*a1;
+	const char	*a2;
+
+	a1 = s1;
+	a2 = s2;
+	while (n-- > 0)
+		if (*a1++ != *a2++)
+			return ((unsigned char)*(a1 - 1) - (unsigned char)*(a2 - 1));
+	return ((unsigned char)*(a1 - 1) - (unsigned char)*(a2 - 1));
 }

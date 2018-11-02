@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/26 16:01:18 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/10/31 13:31:21 by dderevyn         ###   ########.fr       */
+/*   Created: 2018/10/30 16:16:06 by dderevyn          #+#    #+#             */
+/*   Updated: 2018/10/30 18:07:53 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+void	*ft_memalloc(size_t size)
 {
-	write(1, &c, 1);
+	void	*area;
+
+	area = (void*)malloc(size * sizeof(*area));
+	if (area != NULL)
+		ft_memset(area, 0, size);
+	return (area);
 }

@@ -6,16 +6,16 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:14:10 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/10/29 18:20:36 by dderevyn         ###   ########.fr       */
+/*   Updated: 2018/10/31 18:39:30 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *str)
+void	ft_putstr(char const *s)
 {
-	if (!str)
+	if (s == NULL)
 		return ;
-	while (*str)
-		ft_putchar(*str++);
+	while (*s)
+		ft_putchar(*s++);
 }

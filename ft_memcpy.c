@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   memcpy.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/26 16:01:18 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/10/31 13:31:21 by dderevyn         ###   ########.fr       */
+/*   Created: 2018/10/30 13:25:31 by dderevyn          #+#    #+#             */
+/*   Updated: 2018/10/30 13:42:01 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	write(1, &c, 1);
+	char		*a;
+	const char	*b;
+
+	a = dst;
+	b = src;
+	while (n-- > 0)
+		*a++ = *b++;
+	return (dst);
 }
