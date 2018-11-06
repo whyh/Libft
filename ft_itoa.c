@@ -6,7 +6,7 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/31 14:40:07 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/10/31 20:52:09 by dderevyn         ###   ########.fr       */
+/*   Updated: 2018/11/04 18:47:46 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_itoa(int n)
 		p = p / 10;
 	if (n == -2147483648)
 		i = 11;
-	a = ft_strnew(i + 1);
+	a = ft_strnew(i);
 	if (a == NULL)
 		return (NULL);
 	p = n;

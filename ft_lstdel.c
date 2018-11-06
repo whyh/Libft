@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/26 16:41:57 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/02 19:42:05 by dderevyn         ###   ########.fr       */
+/*   Created: 2018/11/05 17:16:26 by dderevyn          #+#    #+#             */
+/*   Updated: 2018/11/06 15:23:12 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-//#include <libc.h>
-//#include <ctype.h>
-#include <fcntl.h>
 
-#define MAX_INT "\3-975810"
-#define MIN_INT	2147483648
-
-int	main(void)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	char	*a = "VAF";
-	char	**arr;
+	t_list	*c;
 
-	arr = ft_strsplit(a, ' ');
-	while (*arr)
+	while ((*alst)->next != NULL)
 	{
-		ft_putstr(*(arr++));
-		ft_putchar('\n');
+		c = (*alst)->next;
+		ft_lstdelone(&(*alst), del);
+		*alst = c;
 	}
-	return (0);
+	ft_lstdelone(&(*alst), del);
+	*alst = NULL;
 }
