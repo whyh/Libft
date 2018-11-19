@@ -6,13 +6,13 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/29 16:35:38 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/10/29 16:51:51 by dderevyn         ###   ########.fr       */
+/*   Updated: 2018/11/08 17:26:25 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	char *restrict	p;
+	char	*p;
 
 	p = s1;
 	while (*s1)

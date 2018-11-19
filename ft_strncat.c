@@ -6,15 +6,15 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/29 16:53:34 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/10/31 17:38:25 by dderevyn         ###   ########.fr       */
+/*   Updated: 2018/11/08 17:26:48 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	char *restrict	p;
+	char	*p;
 
 	p = s1;
 	while (*s1)

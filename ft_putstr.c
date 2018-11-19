@@ -6,7 +6,7 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:14:10 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/10/31 18:39:30 by dderevyn         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:33:21 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,5 @@ void	ft_putstr(char const *s)
 {
 	if (s == NULL)
 		return ;
-	while (*s)
-		ft_putchar(*s++);
+	write(1, s, ft_strlen(s));
 }

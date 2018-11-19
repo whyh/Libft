@@ -6,7 +6,7 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/29 15:58:00 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/10/29 16:12:50 by dderevyn         ###   ########.fr       */
+/*   Updated: 2018/11/08 17:27:12 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strcpy(char *dst, const char *src)
 	char	*p;
 
 	p = dst;
-	while (*src && *p)
+	while (*src)
 		*p++ = *src++;
 	*p = '\0';
 	return (dst);
