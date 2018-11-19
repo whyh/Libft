@@ -6,7 +6,7 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:10:22 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/16 17:17:04 by dderevyn         ###   ########.fr       */
+/*   Updated: 2018/11/19 21:56:16 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <string.h>
 # include <libc.h>
+
+# define LLONG_MAX2 9223372036854775807
+# define INT_MIN2	-2147483648
 
 typedef struct		s_list
 {

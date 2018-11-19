@@ -6,7 +6,7 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 17:00:08 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/16 15:10:14 by dderevyn         ###   ########.fr       */
+/*   Updated: 2018/11/19 22:40:25 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 static int	static_ft_is_whitespace(int c)
 {
-	if (c == '\t' || c == '\n' || c == '\v' ||
-	c == '\f' || c == '\r' || c == ' ')
-		return (1);
-	return (0);
+	return (c == '\t' || c == '\n' || c == '\v' ||
+	c == '\f' || c == '\r' || c == ' ');
 }
 
 int			ft_atoi(const char *str)
@@ -37,10 +35,11 @@ int			ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		if (nbr > LLONG_MAX / 10 ||
-		(sign == 1 && nbr == LLONG_MAX / 10 && *str > '7'))
+		if ((nbr > LLONG_MAX2 / 10 ||
+		(nbr == LLONG_MAX2 / 10 && *str > '7')) && sign == 1)
 			return (-1);
-		if (sign == -1 && nbr == LLONG_MAX / 10 && *str > '8')
+		if ((nbr > LLONG_MAX2 / 10 ||
+		(nbr == LLONG_MAX2 / 10 && *str > '8')) && sign == -1)
 			return (0);
 		nbr = nbr * 10 + *str - '0';
 		++str;

@@ -6,19 +6,19 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/29 16:35:38 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/08 17:26:25 by dderevyn         ###   ########.fr       */
+/*   Updated: 2018/11/19 22:19:15 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	char	*p;
+	char	*s;
 
-	p = s1;
-	while (*s1)
-		++s1;
+	s = s1;
+	while (*s)
+		++s;
 	while (*s2)
-		*s1++ = *s2++;
-	*s1 = '\0';
-	return (p);
+		*s++ = *s2++;
+	*s = '\0';
+	return (s1);
 }
