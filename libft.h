@@ -6,7 +6,7 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 16:10:22 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/19 21:56:16 by dderevyn         ###   ########.fr       */
+/*   Updated: 2018/11/27 18:56:02 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,7 @@ void				ft_intiteri(int *arr, int length, void (*f)(int, int*));
 int					ft_is_included(char *str, char c);
 int					ft_is_whitespace(int c);
 char				*ft_itoabase(char *set, int nb);
+size_t				ft_linetrim(char **str, size_t n);
+size_t				ft_linelen(char *str);
 
 #endif

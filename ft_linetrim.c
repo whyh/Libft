@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_linetrim.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 15:25:16 by dderevyn          #+#    #+#             */
-/*   Updated: 2018/11/28 19:30:17 by dderevyn         ###   ########.fr       */
+/*   Created: 2018/11/26 16:13:38 by dderevyn          #+#    #+#             */
+/*   Updated: 2018/11/26 16:19:24 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+size_t		ft_linetrim(char **str, size_t n)
 {
+	size_t	strlen;
 	size_t	i;
-	char	*s2;
+	char	*s;
+	char	*ret;
 
-	i = ft_strlen(s1);
-	if (!(s2 = ft_strnew(i)))
-		return (NULL);
+	s = *str + n;
+	strlen = ft_strlen(s);
+	if (!(ret = ft_strnew(strlen)))
+		return (0);
 	i = 0;
-	while (s1[i])
+	while (i < strlen)
 	{
-		s2[i] = s1[i];
+		ret[i] = s[i];
 		++i;
 	}
-	return (s2);
+	ft_strdel(str);
+	*str = ret;
+	return (strlen);
 }
