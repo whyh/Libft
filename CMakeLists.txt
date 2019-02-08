@@ -7,5 +7,5 @@ set(CMAKE_C_STANDARD 99)
 AUX_SOURCE_DIRECTORY(libft LIBFT)
 
 add_executable(
-        ft_printf ${LIBFT}
+        libft ${LIBFT}
         main.c)
