@@ -6,7 +6,7 @@
 /*   By: dderevyn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/08 18:11:20 by dderevyn          #+#    #+#             */
-/*   Updated: 2019/02/08 18:17:31 by dderevyn         ###   ########.fr       */
+/*   Updated: 2019/02/08 18:20:07 by dderevyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	main(void)
 {
-	char	*str;
+	char	str[3];
 
 	ft_putnbr(ft_strcmp("abc", ft_strcpy(str, "abc")));
 	return (0);
