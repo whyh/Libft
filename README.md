@@ -37,7 +37,7 @@ void    ft_striter(char *s, void (*f)(char *));
 ```
 Applies the function `f` to each character of string `s` .
 ```c
-void    ft_striteri(char *s, void (*f)(unsigned int, char *));
+void    ft_striteri(char *s, void (*f)(unsigned int, char*));
 ```
 Applies function `f` to each character of string `s` , and passing its index as first argument.
 ```c
@@ -117,7 +117,7 @@ void    ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 ```
 Deletes an ellement of list `alst` using `del` function, set pointer to `NULL` .
 ```c
-void    ft_lstdel(t_list **alst, void (*del)(void *,size_t));
+void    ft_lstdel(t_list **alst, void (*del)(void*,size_t));
 ```
 Deletes all ellements of list `alst` using `del` function, sets pointers to `NULL` .
 ```c
@@ -125,11 +125,11 @@ void    ft_lstadd(t_list **alst, t_list *new);
 ```
 Adds element `new` at the beginning of list `alst` .
 ```c
-void    ft_lstiter(t_list *lst, void (*f)(t_list*elem));
+void    ft_lstiter(t_list *lst, void (*f)(t_list*));
 ```
 Iterates list `lst` and applies function `f` to each link.
 ```c
-t_list  *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_list  *ft_lstmap(t_list *lst, t_list *(*f)(t_list*));
 ```
 Iterates list `lst` and applies function `f` to each link to create a list resulting from applications of `f` .
 
