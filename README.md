@@ -45,7 +45,7 @@ char    *ft_strmap(char const *s, char (*f)(char));
 ```
 Applies function `f` to each character of string `s` to create new string resulting from applications of `f` .
 ```c
-char    *ft_strmapi(char const *s, char(*f)(unsigned int, char))
+char    *ft_strmapi(char const *s, char(*f)(unsigned int, char));
 ```
 Applies function `f` to each character of string `s` by giving its index as first argument to create new string resulting from applications of `f` .
 ```c
@@ -57,11 +57,11 @@ int     ft_strnequ(char const *s1, char const *s2,size_t n);
 ```
 Lexicographical comparison of `s1` and `s2` up to `n` characters or until a `\0` is reached. If strings are identical, function returns `1` , `0` otherwise.
 ```c
-char    *ft_strsub(char const *s, unsigned int start, size_t len)
+char    *ft_strsub(char const *s, unsigned int start, size_t len);
 ```
 Allocates and returns substring from string `s` . The substring begins at index `start` and is of size `len` .
 ```c
-char    *ft_strjoin(char const *s1, char const*s2)
+char    *ft_strjoin(char const *s1, char const*s2);
 ```
 Allocates and returns string, result of the concatenation of `s1` and `s2` .
 ```c
