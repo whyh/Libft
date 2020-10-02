@@ -1,4 +1,4 @@
-# libf
+# libft
 ### My first C library
 
 An objective was to replicate functional of bunch libc functions as close as it is possible, using just few basic standart functions:
