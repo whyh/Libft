@@ -8,7 +8,7 @@ void     *malloc(size_t size);
 void     free(void *ptr);
 ```
 
-## Implemented standard C library functions
+## Included standard C library functions
 `memset` `bzero` `memcpy` `memccpy` `memmove` `memchr` `memcmp` `strlen` `strdup` `strcpy` `strncpy` `strcat` `strncat` `strlcat` `strchr` `strrchr` `strstr` `strnstr` `strcmp` `strncmp` `atoi` `isalpha` `isdigit` `isalnum` `isascii` `isprint` `toupper` `tolower`
 
 ## Other functions, I found to be useful and worth including in my library
