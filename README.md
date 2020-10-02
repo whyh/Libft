@@ -11,7 +11,7 @@ void     free(void *ptr);
 ## Included standard C library functions
 `memset` `bzero` `memcpy` `memccpy` `memmove` `memchr` `memcmp` `strlen` `strdup` `strcpy` `strncpy` `strcat` `strncat` `strlcat` `strchr` `strrchr` `strstr` `strnstr` `strcmp` `strncmp` `atoi` `isalpha` `isdigit` `isalnum` `isascii` `isprint` `toupper` `tolower`
 
-## Other functions, I found to be useful and worth including in my library
+## Other functions, I found to be useful and worth including
 ```c
 void    *ft_memalloc(size_t size);
 ```
@@ -133,7 +133,7 @@ t_list  *ft_lstmap(t_list *lst, t_list *(*f)(t_list*));
 ```
 Iterates list `lst` and applies function `f` to each link to create a list resulting from applications of `f`
 
-## Some extra functions
+## Some extra functions utilising libft
 ```c
 long long  ft_atoibase(char *set, char *str);
 ```
